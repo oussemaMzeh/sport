@@ -1,0 +1,41 @@
+<div class="site-section bg-dark">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="widget-next-match" style="text-align: center;">
+          <table class="table custom-table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th> Name</th>
+                <th>Age</th>
+                <th> Nombre </th>
+                <th> Position </th>
+                <th>Action </th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of players">
+                <td><strong class="text-white">{{p._id}} </strong></td>
+                <td><strong class="text-white">{{p.name}}</strong></td>
+                <td><strong class="text-white">{{p.age}} </strong></td>
+                <td><strong class="text-white">{{p.nbr}} </strong></td>
+                <td><strong class="text-white">{{p.position}} </strong></td>
+                <td><strong class="text-white">
+                    <button type="button" class="btn btn-success" (click)="goToEditPlayer(p._id)">Edit</button>
+                    <button type="button" class="btn btn-danger" (click)="deletePlayerById(p._id)">Delete</button>
+                    <button type="button" class="btn btn-warning" (click)="goToDisplayPlayer(p._id)">Display</button>
+                  </strong></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
